@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string>
+using namespace std;
+	
+	string nama;
+	char mahasiswa;
+	string nim = "ETE10190119";
+	char golonganDarah = 'B';
+	float tinggiBadan = 160.5;
+	float beratBadan = 80.5 ;
+	bool siswa, siswa2;
+	
+double pengurangan (double tinggiBadan, double rumus){
+	return tinggiBadan - rumus;
+	}
+
+int main (){
+	cout<<"Apakah anda mahasiswa POLANKA? [Y/N]>> "; cin >> mahasiswa;
+	
+	if (mahasiswa == 'y' || mahasiswa =='Y'){
+		cout<< "Selamat datang\n";
+		cout<< "Masukkan nama : "; cin >> nama;
+		cout<< "Golongan Darah : "<< golonganDarah << endl;
+		cout<< "NIM : "<< nim;
+		cout<< endl;
+		cout<< "Tinggi Badan : "<< tinggiBadan;
+		cout<< endl;
+		cout<< "Berat Badan : "<< beratBadan;
+		cout<< endl;
+		cout<< "ini adalah hasil berat badan ideal : "<< pengurangan (160.5, 100);
+		cout<<endl;
+	}else if(mahasiswa == 'n' || mahasiswa == 'N'){
+		cout<<"\nMaaf anda tidak bisa masuk";
+	}
+	
+	siswa = mahasiswa == 'y' || mahasiswa == 'Y';
+	siswa2 = mahasiswa == 'n' || mahasiswa == 'N';
+	
+	if (siswa){
+		cout << "\n\nSelamat datang di POLANKA!!! atas nama " << nama;
+	}
+	else if (siswa2){
+		cout << " Karena anda bukan mahasiswa POLANKA!";
+	}
+}
